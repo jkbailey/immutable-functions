@@ -1,0 +1,19 @@
+{
+  "name": "immutable-functions",
+  "version": "0.1.0",
+  "description": "Functions to help with immutability, mainly for use with arrays in redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "immutable",
+    "functions",
+    "arrays",
+    "collections",
+    "redux",
+    "reducers"
+  ],
+  "author": "Jerry Bailey",
+  "license": "ISC"
+}
