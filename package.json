@@ -15,5 +15,8 @@
     "reducers"
   ],
   "author": "Jerry Bailey",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^1.5.3"
+  }
 }
