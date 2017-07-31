@@ -1,6 +1,6 @@
 {
   "name": "immutable-functions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Functions to help with immutability, mainly for use with arrays in redux",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,5 @@
   ],
   "author": "Jerry Bailey",
   "license": "MIT",
-  "dependencies": {
-    "prettier": "^1.5.3"
-  }
+  "repository": "jkbailey/immutable-functions"
 }
