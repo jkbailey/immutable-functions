@@ -1,6 +1,6 @@
 {
   "name": "immutable-functions",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Functions to help with immutability, mainly for use with arrays in redux",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@ const _create = (state, data) => {
   return [...state];
 };
 
-export const _update = (state, id, data) => {
+const _update = (state, id, data) => {
   if (_exists(state, id)) {
     state[_index(state, id)] = {
       ..._find(state, id),
