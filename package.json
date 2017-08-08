@@ -1,7 +1,7 @@
 {
   "name": "immutable-functions",
-  "version": "0.1.4",
-  "description": "Functions to help with immutability, mainly for use with arrays in redux",
+  "version": "0.1.5",
+  "description": "A simple, easy, straight forward approach to update immutable data.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,9 @@
     "arrays",
     "collections",
     "redux",
-    "reducers"
+    "reducers",
+    "react",
+    "javascript"
   ],
   "author": "Jerry Bailey",
   "license": "MIT",
