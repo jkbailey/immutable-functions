@@ -1,4 +1,5 @@
-const _exists = (state, id) => state.filter(x => x.id === id).length > 0;
+const _exists = (state, id) =>
+  state.filter(x => x.id === id).length > 0;
 
 const _index = (state, id) =>
   _exists(state, id) && state.indexOf(_find(state, id));
@@ -6,22 +7,22 @@ const _index = (state, id) =>
 const _find = (state, id) =>
   _exists(state, id) && state.filter(x => x.id === id)[0];
 
-const _create = (state, data) => {
-  !_exists(state, data.id) && state.push(data);
-  return [...state];
-};
+const _create = (state, data) =>
+  !_exists(state, data.id) && [...state, data];
 
 const _update = (state, id, data) => {
   if (_exists(state, id)) {
-    state[_index(state, id)] = {
-      ..._find(state, id),
-      ...data
-    };
+    let _state = [...state];
+    let i = _index(_state, id);
+    _state[i] = Object.assign({}, _state[i], data);
+    return _state;
+  } else {
+    return state;
   }
-  return [...state];
 };
 
-const _destroy = (state, id) => state.filter(group => group.id !== id);
+const _destroy = (state, id) =>
+  state.filter(group => group.id !== id);
 
 const _existsByProp = (state, prop, id) =>
   state && state.filter(x => x[prop] === id).length > 0;

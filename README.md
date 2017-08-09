@@ -1,5 +1,5 @@
 # Immutable Functions
-Functions to help with immutability, mainly for use with arrays in redux
+A simple, easy, straight forward approach to update immutable data.
 
 # Installation
 ```sh
