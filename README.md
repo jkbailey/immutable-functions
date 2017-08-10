@@ -3,7 +3,7 @@ A simple, easy, straight forward approach to update immutable data.
 
 # Installation
 ```sh
-$ yarn add -s immutable-functions
+$ yarn add immutable-functions
 ```
 or
 ```sh
