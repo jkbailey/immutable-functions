@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jkbailey/immutable-functions.svg?branch=master)](https://travis-ci.org/jkbailey/immutable-functions)
+
 # Immutable Functions
 A simple, easy, straight forward approach to update immutable data.
 
