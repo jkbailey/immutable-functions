@@ -13,7 +13,7 @@ $ npm install -s immutable-functions
 ```
 
 # Usage
-```
+```js
 import _i from 'immutable-functions';
 import { CREATE, UPDATE, REMOVE } from '../actions/collection';
 
@@ -31,7 +31,7 @@ export default (state = [], action) => {
 };
 ```
 
-```
+```js
 import React, { PureComponent } from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
@@ -68,7 +68,9 @@ export default connect(mapStoreToProps)(YourComponent);
 ```
 
 ## Functions
-#### `_i.create(state, data)`
+```js
+_i.create(state, data)
+```
 Creates an object if it does not already exist (by `id`) in the array.
   - arguments
     - **state** *(array)* The current array of objects.
@@ -76,7 +78,9 @@ Creates an object if it does not already exist (by `id`) in the array.
 - returns
     - *(array)* A new array with the new object added to the end
 
-#### `_i.update(state, id, data)`
+```js
+_i.update(state, id, data)
+```
 Updates an object if it exists (by `id`) in the array.
   - arguments
     - **state** *(array)* The current array of objects.
@@ -85,7 +89,9 @@ Updates an object if it exists (by `id`) in the array.
 - returns
     - *(array)* A new array with the object updated
 
-#### `_i.destroy(state, id)`
+```js
+_i.destroy(state, id)
+```
 Destroys an object if it exists (by `id`) in the array.
   - arguments
     - **state** *(array)* The current array of objects.
@@ -93,7 +99,9 @@ Destroys an object if it exists (by `id`) in the array.
 - returns
     - *(array)* A new array with the object removed
 
-#### `_i.find(state, id)`
+```js
+_i.find(state, id)
+```
 Find an object if it exists (by `id`) in the array. Useful in components when accessing the data.
   - arguments
     - **state** *(array)* The current array of objects.

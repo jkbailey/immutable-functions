@@ -1,6 +1,6 @@
 {
   "name": "immutable-functions",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple, easy, straight forward approach to update immutable data.",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "author": "Jerry Bailey",
   "license": "MIT",
   "repository": "jkbailey/immutable-functions",
-  "dependencies": {
+  "devDependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0"
   }
