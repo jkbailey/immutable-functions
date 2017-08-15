@@ -24,6 +24,19 @@ const _update = (state, id, data) => {
 const _destroy = (state, id) =>
   state.filter(group => group.id !== id);
 
+const _merge = (state, array) => {
+  if (!array) return state;
+  let _state = [...state];
+  array.forEach(item => {
+    if (_exists(_state, item.id)) {
+      _state = _update(_state, item.id, item);
+    } else {
+      _state = _create(_state, item);
+    }
+  });
+  return _state;
+};
+
 const _existsByProp = (state, prop, id) =>
   state && state.filter(x => x[prop] === id).length > 0;
 
@@ -36,6 +49,7 @@ module.exports = {
   create: _create,
   update: _update,
   destroy: _destroy,
+  merge: _merge,
   existsByProp: _existsByProp,
   findByProp: _findByProp
 };

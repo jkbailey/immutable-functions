@@ -100,6 +100,16 @@ Destroys an object if it exists (by `id`) in the array.
     - *(array)* A new array with the object removed
 
 ```js
+_i.merge(state, array)
+```
+Merges an array of objects with the current state (unique by `id`).
+  - arguments
+    - **state** *(array)* The current array of objects.
+    - **array** *(array)* new objects being merged.
+- returns
+    - *(array)* A new array with all the objects unique by `id`
+
+```js
 _i.find(state, id)
 ```
 Find an object if it exists (by `id`) in the array. Useful in components when accessing the data.
