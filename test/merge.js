@@ -36,4 +36,22 @@ describe("Create object", function() {
       {id: 3, name: 'Jason'}
     ]);
   });
+
+  it("existing object is updated with any new data", function() {
+    let arr1 = [
+      {id: 1, name: 'Jerry'},
+      {id: 2, name: 'Jeremy'}
+    ];
+    let arr2 = [
+      {id: 2, name: 'Slaphost'},
+      {id: 3, name: 'Jason'}
+    ];
+    let newArr = _i.merge(arr1, arr2);
+
+    expect(newArr).to.deep.equal([
+      {id: 1, name: 'Jerry'},
+      {id: 2, name: 'Slaphost'},
+      {id: 3, name: 'Jason'}
+    ]);
+  });
 });
