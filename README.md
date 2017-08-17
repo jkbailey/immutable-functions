@@ -100,14 +100,15 @@ Destroys an object if it exists (by `id`) in the array.
     - *(array)* A new array with the object removed
 
 ```js
-_i.merge(state, array)
+_i.merge(state, array[, deep])
 ```
-Merges an array of objects with the current state (unique by `id`).
+Merges an object or array of objects (unique by `id`) with the current state.
   - arguments
-    - **state** *(array)* The current array of objects.
-    - **array** *(array)* new objects being merged.
+    - **state** *(array/object)* The current object or array of objects.
+    - **array** *(array/object)* new object or array of objects being merged.
+    - **deep** *(boolean)* will do a deep merge of an object
 - returns
-    - *(array)* A new array with all the objects unique by `id`
+    - *(array/object)* A new object or array with all the objects unique by `id`
 
 ```js
 _i.find(state, id)

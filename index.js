@@ -24,7 +24,35 @@ const _update = (state, id, data) => {
 const _destroy = (state, id) =>
   state.filter(group => group.id !== id);
 
-const _merge = (state, array) => {
+const _merge = (state, newState, deep = false) => {
+  if (!newState) return state;
+
+  if (state instanceof Array) {
+    return _arrayMerge(state, newState, deep);
+  } else if (typeof state === "object") {
+    return _objectMerge(state, newState, deep);
+  }
+};
+
+const _objectMerge = (state, obj, deep) => {
+  let n = Object.assign({}, state);
+  let keys = Object.keys(obj);
+
+  for(let i = 0; i < keys.length; i++) {
+    let k = keys[i];
+    if (typeof obj[k] === "object" && deep) {
+      n[k] = _objectMerge(n[k], obj[k], deep);
+    } else if (obj[k] instanceof Array) {
+      n[k] = _arrayMerge(n[k], obj[k]);
+    } else {
+      n[k] = obj[k];
+    }
+  }
+
+  return n;
+}
+
+const _arrayMerge = (state, array) => {
   if (!array) return state;
   let _state = [...state];
   array.forEach(item => {
