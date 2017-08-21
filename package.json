@@ -1,6 +1,6 @@
 {
   "name": "immutable-functions",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A simple, easy, straight forward approach to update immutable data.",
   "main": "index.js",
   "scripts": {

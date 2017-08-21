@@ -71,6 +71,12 @@ const _existsByProp = (state, prop, id) =>
 const _findByProp = (state, prop, id) =>
   _existsByProp(state, prop, id) && state.filter(x => x[prop] === id)[0];
 
+const _promiseDispatch = obj => dispatch =>
+  new Promise((res, rej) => {
+    dispatch(obj);
+    res();
+  });
+
 module.exports = {
   find: _find,
   index: _index,
@@ -79,5 +85,6 @@ module.exports = {
   destroy: _destroy,
   merge: _merge,
   existsByProp: _existsByProp,
-  findByProp: _findByProp
+  findByProp: _findByProp,
+  promiseDispatch: _promiseDispatch
 };
