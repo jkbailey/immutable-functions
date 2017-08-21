@@ -77,6 +77,22 @@ const _promiseDispatch = obj => dispatch =>
     res();
   });
 
+const _whatChanged = (props, newProps, label = "Props changed") => {
+  console.group(label);
+  for (let key in newProps) {
+    if (props[key] !== newProps[key]) {
+      console.log(
+        key,
+        'old val: ',
+        props[key],
+        ' new val: ',
+        newProps[key]
+      );
+    }
+  }
+  console.groupEnd();
+}
+
 module.exports = {
   find: _find,
   index: _index,
@@ -86,5 +102,6 @@ module.exports = {
   merge: _merge,
   existsByProp: _existsByProp,
   findByProp: _findByProp,
-  promiseDispatch: _promiseDispatch
+  promiseDispatch: _promiseDispatch,
+  whatChanged: _whatChanged
 };
