@@ -1,5 +1,5 @@
 var expect    = require("chai").expect;
-var _i = require("../index");
+var _i = require("../lib/immutable-functions.pure");
 
 describe("Create object", function() {
   it("does not mutate the original array", function() {
