@@ -119,3 +119,30 @@ Find an object if it exists (by `id`) in the array. Useful in components when ac
     - **id** *(integer)* The id of the object you are finding.
 - returns
     - *(array)* A single (first) object with the given id
+
+```js
+_i.findByProp(state, prop, id)
+```
+Find an object if it exists by a property provided in the array. Useful in components when accessing the data.
+  - arguments
+    - **state** *(array)* The current array of objects.
+    - **prop** *(string)* The identifier property on the objects in the array.
+    - **id** *(integer)* The id of the object you are finding.
+- returns
+    - *(array)* A single (first) object with the given identifier property
+- example
+    - `_i.findByProp(state, 'LoanId', '1234456');`
+
+```js
+_i.updateByProp(state, prop, id, data)
+```
+Updates an object if it exists by an identifier property provided in the array.
+  - arguments
+    - **state** *(array)* The current array of objects.
+    - **prop** *(string)* The identifier property on the objects in the array.
+    - **id** *(integer)* The id of the object you are updating.
+    - **data** *(object)* The delta of the object you are updating.
+- returns
+    - *(array)* A new array with the object updated
+- example
+    - `_i.updateByProp(state, 'LoanId', action.obj.LoanId, action.obj); `
