@@ -31,4 +31,20 @@ describe("Update object", function() {
       {id: 3, name: 'Jason'}
     ]);
   });
+
+  it("create the object if it does not exist", function() {
+    let arr = [
+      {id: 1, name: 'Jerry'},
+      {id: 2, name: 'Jeremy'},
+      {id: 3, name: 'Jason'}
+    ];
+    let newArr = _i.update(arr, 4, {id: 4, name: 'Slaphost', type: 'nickname'});
+
+    expect(newArr).to.deep.equal([
+      {id: 1, name: 'Jerry'},
+      {id: 2, name: 'Jeremy'},
+      {id: 3, name: 'Jason'},
+      {id: 4, name: 'Slaphost', type: 'nickname'}
+    ]);
+  });
 });

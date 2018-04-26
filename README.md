@@ -81,7 +81,7 @@ Creates an object if it does not already exist (by `id`) in the array.
 ```js
 _i.update(state, id, data)
 ```
-Updates an object if it exists (by `id`) in the array.
+Updates an object if it exists (by `id`) in the array, if it does not exist, it will create it.
   - arguments
     - **state** *(array)* The current array of objects.
     - **id** *(integer)* The id of the object you are updating.
@@ -136,7 +136,7 @@ Find an object if it exists by a property provided in the array. Useful in compo
 ```js
 _i.updateByProp(state, prop, id, data)
 ```
-Updates an object if it exists by an identifier property provided in the array.
+Updates an object if it exists by an identifier property provided in the array, if it does not exist, it will create it.
   - arguments
     - **state** *(array)* The current array of objects.
     - **prop** *(string)* The identifier property on the objects in the array.
