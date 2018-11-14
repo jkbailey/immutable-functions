@@ -146,3 +146,17 @@ Updates an object if it exists by an identifier property provided in the array, 
     - *(array)* A new array with the object updated
 - example
     - `_i.updateByProp(state, 'LoanId', action.obj.LoanId, action.obj); `
+
+
+```js
+_i.destroyByProp(state, prop, id)
+```
+Destroy an object if it exists by an identifier property provided in the array.
+  - arguments
+    - **state** *(array)* The current array of objects.
+    - **prop** *(string)* The identifier property on the objects in the array.
+    - **id** *(integer)* The id of the object you are updating.
+- returns
+    - *(array)* A new array with the object removed
+- example
+    - `_i.destroyByProp(state, 'LoanId', action.obj.LoanId); `
