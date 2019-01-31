@@ -160,3 +160,15 @@ Destroy an object if it exists by an identifier property provided in the array.
     - *(array)* A new array with the object removed
 - example
     - `_i.destroyByProp(state, 'LoanId', action.obj.LoanId); `
+
+```js
+_i.mergeByProp(state, array, prop[, deep])
+```
+Merges an object or array of objects (unique by prop) with the current state.
+  - arguments
+    - **state** *(array/object)* The current object or array of objects.
+    - **array** *(array/object)* new object or array of objects being merged.
+    - **prop** *(string)* The identifier property on the objects in the array.
+    - **deep** *(boolean)* will do a deep merge of an object
+- returns
+    - *(array/object)* A new object or array with all the objects unique by prop
