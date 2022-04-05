@@ -109,4 +109,71 @@ describe("Merge object", function() {
       }
     });
   });
+
+  it("object with nested object deep merges correctly", function() {
+    let obj1 = {
+      loading: false,
+      users: [{
+        id: 1,
+        name: 'Jerry',
+        games: {
+          nodes: [
+            {
+              id: 'asdf',
+              game: 'uno'
+            },
+            {
+              id: 'asdf2',
+              game: 'war'
+            }
+          ]
+        }
+      }]
+    };
+    let obj2 = {
+      loading: true,
+      users: [{
+        id: 1,
+        state: 'California',
+        games: {
+          nodes: [
+            {
+              id: 'asdf2',
+              game: 'rummy'
+            },
+            {
+              id: 'asdf3',
+              game: 'solitare'
+            }
+          ]
+        }
+      }]
+    };
+    let newObj = _i.merge(obj1, obj2, true);
+
+    expect(newObj).to.deep.equal({
+      loading: true,
+      users: [{
+        id: 1,
+        name: 'Jerry',
+        state: 'California',
+        games: {
+          nodes: [
+            {
+              id: 'asdf',
+              game: 'uno'
+            },
+            {
+              id: 'asdf2',
+              game: 'rummy'
+            },
+            {
+              id: 'asdf3',
+              game: 'solitare'
+            }
+          ]
+        }
+      }]
+    });
+  });
 });
